@@ -62,5 +62,5 @@
 
 5 How to use address book
 
-Edit address.txt with gedit.
+Edit ihaphone-address.txt with gedit.
 
