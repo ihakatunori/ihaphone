@@ -1,0 +1,201 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-23 16:30+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: iha_phone.c:7257
+msgid "\nWait for while"
+msgstr "\nしばらくお待ち下さい"
+
+#: iha_phone.c:1891
+#, c-format
+msgid "         please, try the plug plugin %s\n"
+msgstr "         Molimo, pokusajte na plug %s\n"
+
+#: iha_phone.c:6900
+#, c-format
+msgid "Accept for key share from %s(%s)"
+msgstr "Prihvati podjelu tipkovnice od %s(%s)"
+
+#: iha_phone.c:7187
+msgid "CANCEL"
+msgstr "Otkazi"
+
+#: iha_phone.c:7452
+msgid "Connect"
+msgstr "Spoji"
+
+#: iha_phone.c:6228
+msgid "Connect list"
+msgstr "Spoji listu"
+
+#: added by-iha
+msgid "Communication error"
+msgstr "Greska u komunikaciji"
+
+#: added by-iha
+msgid "Connection rejected."
+msgstr "Spoj se odbija."
+
+#: iha_phone.c:7125
+msgid "DialogMessage"
+msgstr "Razgovor/Poruka"
+
+#: iha_phone.c:7460
+msgid "Disconnect"
+msgstr "Iskljuci"
+
+#: iha_phone.c:6359
+msgid "Disconnect list"
+msgstr "Lista iskljucenja"
+
+#: iha_phone.c:7489
+msgid "Hot Line"
+msgstr "Vazna linija"
+
+#: iha_phone.c:5571
+msgid "Hot line IP"
+msgstr "IP Vazne linije"
+
+#: added by-iha
+msgid "Invalid protocol"
+msgstr "Pogresan protocol"
+
+#: added by-iha
+msgid "IP Address"
+msgstr "IP adresa"
+
+#: iha_phone.c:7196
+msgid "IP address for partner"
+msgstr "IP adresa partnera"
+
+#: iha_phone.c:5582
+msgid "Ignore contact"
+msgstr "Ignoriraj poziv"
+
+#: iha_phone.c:6415
+msgid "Katunori Iha"
+msgstr "Katsunori Iha"
+
+#: iha_phone.c:6415
+msgid "Katunori Iha(English)"
+msgstr "Katsunori Iha(Engleski)"
+
+#: added by-iha
+msgid "KEY"
+msgstr "Kljuc"
+
+#: iha_phone.c:6906 iha_phone.c:6927 iha_phone.c:7496
+msgid "Key Share"
+msgstr "Dijeliti kljuc"
+
+#: added by-iha
+msgid "Buffer over flow."
+msgstr "Buffer over flow."
+
+#:added by-iha
+msgid "Key share succsessful."
+msgstr "Uspjesna podjela kljuca."
+
+#:added by-iha
+msgid "Key share faild. Please rerty."
+msgstr "Podjela kljuca neuspjesna. Molimo ponovite postupak."
+
+#: added by-iha
+msgid "Kind"
+msgstr "Vrsta"
+
+#: iha_phone.c:7503
+msgid "License"
+msgstr "Dozvola"
+
+#: iha_phone.c:5559
+msgid "Max Send FPS(0~200)"
+msgstr "Max Send FPS(0~200)"
+
+#: iha_phone.c:6937 iha_phone.c:7202
+msgid "Message code"
+msgstr "Kod poruke"
+
+#: added by-iha
+msgid "Name"
+msgstr "Ime"
+
+#: added by-iha
+msgid "No response"
+msgstr "Nema odgovora"
+
+#: iha_phone.c:6908
+msgid "NO"
+msgstr "NE"
+
+#: iha_phone.c:6931 iha_phone.c:7190
+msgid "Name for partner"
+msgstr "Ime partnera"
+
+#: iha_phone.c:5556 iha_phone.c:6257 iha_phone.c:6388 iha_phone.c:7126
+#: iha_phone.c:7186
+msgid "OK"
+msgstr "Da"
+
+#: iha_phone.c:6909
+msgid "REJECT"
+msgstr "Odbiti"
+
+#: iha_phone.c:6909
+msgid "REJECT ALL"
+msgstr "Odbiti sve"
+
+#: iha_phone.c:5587
+msgid "Reduce the number of draws"
+msgstr "Smanjiti broj izvlacenja"
+
+#: iha_phone.c:7468
+msgid "Respond"
+msgstr "Odgovori"
+
+#: iha_phone.c:7475
+msgid "Set"
+msgstr "Postavi"
+
+#: iha_phone.c:5555
+msgid "Setting"
+msgstr "Postavi"
+
+#: iha_phone.c:7482
+msgid "Start Rec"
+msgstr "Pocni snimati"
+
+#: iha_phone.c:5784
+msgid "Stop Rec"
+msgstr "Zaustavi snimanje"
+
+#: iha_phone.c:6437
+msgid ""
+"This application is distributed under the IHA license ver 1.0.\n"
+"This application is the first IHA license software.\n"
+msgstr "Ova aplikacija se distribuira pod IHA license ver 1.0.\n"
+"Ova aplikacija je prva IHA license software.\n"
+
+#: iha_phone.c:6908
+msgid "YES"
+msgstr "Da"
+
+#: iha_phone.c:6427
+msgid "for secure calls"
+msgstr "za zasticene pozive"
+

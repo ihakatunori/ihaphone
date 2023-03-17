@@ -1,0 +1,2 @@
+specify ip,*,ALLOW
+loop back,127.0.0.1,ALLOW,default.key

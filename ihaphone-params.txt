@@ -1,0 +1,49 @@
+#
+# setup parameter file for IHAPHONE.
+#
+
+# Screen resolution. 1280 or 1920 or 3840.
+SCREEN_RESO=1280
+
+# Camera device. AUTO or /dev/video0....
+CAMERA_DEVICE=AUTO
+
+# Camera resolution. 1280 or 1920 or 3840.
+CAMERA_RESO=1280
+
+# Camera compression. YUV422 or MJPEG.
+CAMERA_COMPRESS=MJPEG
+
+# Image quality. from 0 to 100.
+CAMERA_IMAGE_QUALITY=20
+
+# From 0 to 200.
+MAX_SEND_FPS=30
+
+# From 1 to 120.
+CAPTURE_FPS=10
+
+# From 0 to 100.
+CAPTURE_QUALITY=90
+
+# Key sharing ignore flag. ON or OFF.
+IGNORE_KEY_SHARING=OFF
+
+# Max address entorys. From 1 to 100000.
+MAX_ADDRESS=10000
+
+# Sound effect client number. From 1 to 32.
+SOUND_CLI=25
+
+# PinP display mode. TEXT or IMAGE.
+PINP_DISP_MODE=IMAGE
+
+# Key file dir
+KEY_FILE_DIR="./key"
+
+# rec file dir
+REC_FILE_DIR="./rec"
+
+# address book file
+ADDR_BOOK_FILE="./ihaphone-address.txt"
+

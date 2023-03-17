@@ -1,0 +1,258 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-23 16:30+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "\nWait for while"
+msgstr "\nしばらくお待ち下さい。"
+
+#, c-format
+msgid "         please, try the plug plugin %s\n"
+msgstr "プラグインを試してみて下さい。%s\n"
+
+#, c-format
+msgid "Accept for key share from %s(%s)"
+msgstr "%s(%s)からのキー共有を受け入れますか？"
+
+msgid "CANCEL"
+msgstr "キャンセル"
+
+msgid "Connect"
+msgstr "接続"
+
+msgid "Connect list"
+msgstr "接続先リスト"
+
+msgid "Communication error"
+msgstr "通信エラーです。"
+
+msgid "Connection rejected."
+msgstr "接続が拒否されました。"
+
+msgid "DialogMessage"
+msgstr "ダイアログメッセージ"
+
+msgid "Disconnect"
+msgstr "切断"
+
+msgid "Disconnect list"
+msgstr "接続先リスト"
+
+msgid "Hot Line"
+msgstr "直通"
+
+msgid "Hot line IP"
+msgstr "直通IP"
+
+msgid "Invalid protocol"
+msgstr "プロトコル違反です。"
+
+msgid "IP Address"
+msgstr "IPアドレス"
+
+msgid "IP address for partner"
+msgstr "相手のIPアドレス"
+
+msgid "Ignore key share"
+msgstr "キー共有要求を無視する。"
+
+msgid "Katunori Iha"
+msgstr "伊波勝徳"
+
+msgid "Katunori Iha(English)\n"
+msgstr "伊波勝徳（英語）\n"
+
+msgid "josipandgrace(Croatian)"
+msgstr "ヨゼフ（クロアチア語）"
+
+msgid "KEY"
+msgstr "暗号化キーファイル名"
+
+msgid "Key Share"
+msgstr "キー共有"
+
+msgid "Buffer over flow."
+msgstr "バッファがオーバーフローしました。"
+
+msgid "Key share succsessful."
+msgstr "キーの共有に成功しました。"
+
+msgid "Key share failed. Please retry."
+msgstr "キーの共有に失敗しました。再試行して下さい。"
+
+msgid "Kind"
+msgstr "種別"
+
+msgid "License"
+msgstr "ライセンス"
+
+msgid "Max Send FPS(0~200)"
+msgstr "最大送信FPS(0~200)"
+
+msgid "Message code"
+msgstr "メッセージコード"
+
+msgid "Name"
+msgstr "名前"
+
+msgid "No response"
+msgstr "応答がありません。"
+
+msgid "Name for partner"
+msgstr "相手の名前"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "REJECT"
+msgstr "拒絶"
+
+msgid "REJECT ALL"
+msgstr "全て拒絶"
+
+msgid "Reduce the number of draws"
+msgstr "描画回数を減らす。"
+
+msgid "Respond"
+msgstr "応答"
+
+msgid "Set"
+msgstr "設定"
+
+msgid "Setting"
+msgstr "設定"
+
+msgid "Start Rec"
+msgstr "録画開始"
+
+msgid "Stop Rec"
+msgstr "録画停止"
+
+msgid "This application is distributed under the IHA license ver 1.0.\n" "This application is the first IHA license software.\n"
+msgstr "このアプリケーションはIHAライセンスVer1.0の元に配布されています。\n" "このアプリケーションは最初のIHAライセンスソフトウェアです。\n"
+
+msgid "YES"
+msgstr "はい"
+
+msgid "NO"
+msgstr "いいえ"
+
+msgid "secure calls for all people"
+msgstr "安全な会話を全ての人へ"
+
+msgid "Image Quality(0~100)"
+msgstr "画質（０〜１００）"
+
+msgid "Exit"
+msgstr "終了"
+
+msgid "Max Draws(1~1500)"
+msgstr "最大描画数（１〜１５００）"
+
+msgid "Capture"
+msgstr "キャプチャ"
+
+msgid "\nWarning : There is a risk that this method will be decrypted by a quantum computer.\n\nThe safest way is to hand it in directly.\n"
+msgstr "\n警告：この方法は量子コンピュータで解読される危険性があります。\n\n　　　最も安全な方法は直接手渡しすることです。\n"
+
+msgid "Authentication failed.\n"
+msgstr "認証に失敗しました。\n"
+
+msgid "Multi mode"
+msgstr "マルチモードにする。"
+
+msgid "(no voice)"
+msgstr "(音声なし)"
+
+msgid "(capture)"
+msgstr "(キャプチャ)"
+
+msgid "Entry ip address"
+msgstr "IPアドレスの入力"
+
+msgid "Warning"
+msgstr "警告"
+
+msgid "Not allowed no crypto\n"
+msgstr "暗号なし通信は許可されていません。\n"
+
+msgid "Allow no crypto"
+msgstr "暗号なし通信を許可する。"
+
+msgid "Unencrypted communication is allowed.\nThis poses a risk of communication being intercepted and It makes attacking this phone easy.\nNot recommended.\n"
+msgstr "暗号なし通信が許可されています。\nこのことは、通信が盗聴されるリスクがあるとともに\nこの電話への攻撃を容易なものにしています。\n推奨できません。\n"
+
+msgid "Unencrypted communication is allowed.\nThis poses a risk of communication being intercepted and It makes attacking this phone easy.\nNot recommended.\nMultimode is disabled.\n"
+msgstr "暗号なし通信が許可されています。\nこのことは、通信が盗聴されるリスクがあるとともに\nこの電話への攻撃を容易なものにしています。\n推奨できません。\nマルチモードは無効になります。\n"
+
+msgid "Ip address is in the list.\nPlease select from the list.\n"
+msgstr "IPアドレスはリストにあります。\nリストから選択して下さい。\n"
+
+msgid "Do not move windows or overlap other windows while recording.\n"
+msgstr "録画中はウィンドウを動かしたり、他のウィンドウを重ねたりしないで下さい。\n"
+
+msgid "\nWarning : Address book is full. Can not register.\n"
+msgstr "\n警告：アドレス帳が満杯です。登録出来ません。\n"
+
+msgid "Authentication code"
+msgstr "認証コード"
+
+msgid "Incorrect IP address\n"
+msgstr "IPアドレスが正しくありません。\n"
+
+msgid "\nWarning : Name is too long.\n"
+msgstr "\n警告：名前が長すぎます。\n"
+
+msgid "\nWarning : Authentication code is too long.\n"
+msgstr "\n警告：認証コードが長すぎます。\n"
+
+msgid "\nWarning : This name is registered.\n"
+msgstr "\n警告：この名前は登録済です。\n"
+
+msgid "There is a defect in the ihaphone-params.txt file.\n"
+msgstr "ihaphone-params.txtファイルに不備があります。\n"
+
+msgid "There is a defect in the address book(%s).\n"
+msgstr "アドレス帳（%s）に不備があります。\n"
+
+msgid "Search"
+msgstr "検索"
+
+msgid "\nDirect IP is not set.\n"
+msgstr "\n直通IPは設定されていません。\n"
+
+msgid "Recording failed.\n"
+msgstr "録画に失敗しました。\n"
+
+msgid "Recording failed.\nCheck the setting of REC_FILE_DIR in the parameter file.\n"
+msgstr "録画に失敗しました。\nパラメータファイルのREC_FILE_DIRの設定を確認して下さい。\n"
+
+msgid "No file permissions.\nCheck the setting of KEY_FILE_DIR in the parameter file.\nAlso check the directory permissions.\n"
+msgstr "ディレクトリへアクセスできません。\nパラメータファイルのKEY_FILE_DIRの設定を確認して下さい。\nディクトリのパーミッションも確認して下さい。\n"
+
+msgid "No file permissions.\nCheck the setting of REC_FILE_DIR in the parameter file.\nAlso check the directory permissions.\n"
+msgstr "ディレクトリへアクセスできません。\nパラメータファイルのREC_FILE_DIRの設定を確認して下さい。\nディクトリのパーミッションも確認して下さい。\n"
+
+msgid "Sound setting"
+msgstr "サウンド設定"
+
+msgid "Sox is not installed\n"
+msgstr "SOXがインストールされていません。\n"
+
+msgid "Ffmpeg is not installed\n"
+msgstr "FFMPEGがインストールされていません。\n"
+
