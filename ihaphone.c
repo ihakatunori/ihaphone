@@ -4501,6 +4501,63 @@ static	int	update_address_book(void)
 	return 0;
 }
 
+static	int	update_params(char *item,char *value)
+{
+	FILE			*fp1,*fp2;
+	char			param_file[64],buf[1024],buf2[1024],buf3[1024+100],*str,*stop;
+
+
+	my_strncpy(param_file,"./ihaphone-params.txt",sizeof(param_file));
+	fp1 = fopen(param_file,"r");
+	if(fp1 == NULL){
+		return -1;
+	}
+	sprintf(buf,"%s.tmp",param_file);
+	fp2 = fopen(buf,"w");
+	if(fp2 == NULL){
+		fclose(fp1);
+		return -1;
+	}
+
+	while(1){
+		if(fgets(buf,sizeof(buf),fp1) == NULL){
+			break;
+		}
+		my_strncpy(buf2,buf,sizeof(buf2));
+		if((buf[0] == '#') || buf[0] == '\n'){
+			fwrite(buf,strlen(buf),1,fp2);
+			continue;
+		}
+
+		str = strtok_r(buf,"=\n",&stop);
+		if(str){
+			if(strcmp(item,str) == 0){
+				sprintf(buf3,"%s=%s\n",item,value);
+				fwrite(buf3,strlen(buf3),1,fp2);
+			}else{
+				fwrite(buf2,strlen(buf2),1,fp2);
+			}
+		}else{
+			fwrite(buf2,strlen(buf2),1,fp2);
+		}
+	}
+
+	fclose(fp1);
+	fclose(fp2);
+
+	sprintf(buf3,"mv %s.tmp %s",param_file,param_file);
+	my_system(buf3);
+	sprintf(buf3,"chmod 0600 %s",param_file);
+	my_system(buf3);
+
+	return 0;
+}
+
+
+
+
+
+
 static	int	update_address_book2(void)
 {
 	FILE			*fp1,*fp2;
@@ -7647,22 +7704,31 @@ top:
 	if(response == GTK_RESPONSE_YES){
 		if(gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(check1))){
 			Ignoreflg = TRUE;
+			my_strncpy(buf,"ON",sizeof(buf));
 		}else{
 			Ignoreflg = FALSE;
+			my_strncpy(buf,"OFF",sizeof(buf));
 		}
+		update_params("IGNORE_KEY_SHARING",buf);
 
 		if(gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(check2))){
 			mode = MODE_MULTI;
+			my_strncpy(buf,"ON",sizeof(buf));
 		}else{
 			mode = MODE_SINGLE;
+			my_strncpy(buf,"OFF",sizeof(buf));
 		}
+		update_params("MULTI_MODE",buf);
 
 		if(gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(check3))){
 			allow_no_crypto = 1;
+			my_strncpy(buf,"ON",sizeof(buf));
 			OKDialog(gettext("Unencrypted communication is allowed.\nThis poses a risk of communication being intercepted and It makes attacking this phone easy.\nNot recommended.\n"));
 		}else{
 			allow_no_crypto = 0;
+			my_strncpy(buf,"OFF",sizeof(buf));
 		}
+		update_params("ALLOW_NO_CRYPTO",buf);
 
 		entry_text1 = gtk_entry_get_text (GTK_ENTRY (entry1));
 		if(IsDigit((char *)entry_text1) == 0){
@@ -7672,6 +7738,8 @@ top:
 		fps = atoi(entry_text1);
 		if((0 <= fps) && (fps <= 200)){
 			MaxSendFps = fps;
+			sprintf(buf,"%d",fps);
+			update_params("MAX_SEND_FPS",buf);
 		}else{
 			gtk_widget_destroy(dialog);
 			goto top;
@@ -7680,10 +7748,12 @@ top:
 		entry_text2 = gtk_entry_get_text (GTK_ENTRY (entry2));
 		if(entry_text2[0]){
 			if(IsIP((char *)entry_text2) == 0){
+				OKDialog(gettext("Incorrect IP address\n"));
 				gtk_widget_destroy(dialog);
 				goto top;
 			}
 			if(list_from_ip((char *)entry_text2) == NULL){
+				OKDialog(gettext("Please specify the HOT IP registered in the address book.\n"));
 				gtk_widget_destroy(dialog);
 				goto top;
 			}
@@ -7705,6 +7775,8 @@ top:
 		Iq = atoi(entry_text3);
 		if((0 <= Iq) && (Iq <= 100)){
 			ImageQuality = Iq;
+			sprintf(buf,"%d",Iq);
+			update_params("CAMERA_IMAGE_QUALITY",buf);
 		}else{
 			gtk_widget_destroy(dialog);
 			goto top;
@@ -11640,6 +11712,26 @@ static	int	set_params(void)
 				Ignoreflg = FALSE;
 			}else{
 				fprintf(stderr,"Warning : Invalid value for ignore flag.(file=%s line=%d)\n",__FILE__,__LINE__);
+				rv = 1;
+				continue;
+			}
+		}else if(memcmp(buf2,"MULTI_MODE",10) ==0){
+			if((memcmp(str,"ON",2) == 0)){
+				 mode = MODE_MULTI;
+			}else if((memcmp(str,"OFF",3) == 0)){
+				mode = MODE_SINGLE;
+			}else{
+				fprintf(stderr,"Warning : Invalid value for multi-mode flag.(file=%s line=%d)\n",__FILE__,__LINE__);
+				rv = 1;
+				continue;
+			}
+		}else if(memcmp(buf2,"ALLOW_NO_CRYPTO",15) ==0){
+			if((memcmp(str,"ON",2) == 0)){
+				 allow_no_crypto = 1;
+			}else if((memcmp(str,"OFF",3) == 0)){
+				 allow_no_crypto = 0;
+			}else{
+				fprintf(stderr,"Warning : Invalid value for allow no crypto flag.(file=%s line=%d)\n",__FILE__,__LINE__);
 				rv = 1;
 				continue;
 			}
