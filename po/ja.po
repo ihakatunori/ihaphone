@@ -256,3 +256,6 @@ msgstr "SOXがインストールされていません。\n"
 msgid "Ffmpeg is not installed\n"
 msgstr "FFMPEGがインストールされていません。\n"
 
+msgid "Please specify the HOT IP registered in the address book.\n"
+msgstr "HOT IPはアドレス帳に登録済みのものを指定して下さい。\n"
+
