@@ -7945,9 +7945,9 @@ static void cb_rec (GtkWidget *bt, gpointer user_data)
 
 	check_click();
 
-	if((recflg == 0) && (cur_sess_no == 0)){
-		return;
-	}
+//	if((recflg == 0) && (cur_sess_no == 0)){
+//		return;
+//	}
 
 	if(bt || user_data){			// 録画開始から５秒以内に終了された場合を考慮
 		timer = time(NULL);
