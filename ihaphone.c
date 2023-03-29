@@ -7625,11 +7625,13 @@ static void cb_set( GtkWidget *button,gpointer user_data)
 	gint		response;
 	char		buf[128];
 	const 		gchar *entry_text1,*entry_text2,*entry_text3;	//,*entry_text4;
-	int		fps,Iq;
+	int		fps,Iq,err;
 
 	check_click();
 
 top:
+
+	err = 0;
 
 	dialog = gtk_dialog_new_with_buttons(gettext("Setting"), GTK_WINDOW(window),
 		       	GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT, gettext("OK"),
@@ -7732,8 +7734,9 @@ top:
 
 		entry_text1 = gtk_entry_get_text (GTK_ENTRY (entry1));
 		if(IsDigit((char *)entry_text1) == 0){
-			gtk_widget_destroy(dialog);
-			goto top;
+			err = 1;
+//			gtk_widget_destroy(dialog);
+//			goto top;
 		}
 		fps = atoi(entry_text1);
 		if((0 <= fps) && (fps <= 200)){
@@ -7741,26 +7744,30 @@ top:
 			sprintf(buf,"%d",fps);
 			update_params("MAX_SEND_FPS",buf);
 		}else{
-			gtk_widget_destroy(dialog);
-			goto top;
+			err = 1;
+//			gtk_widget_destroy(dialog);
+//			goto top;
 		}
 
 		entry_text2 = gtk_entry_get_text (GTK_ENTRY (entry2));
 		if(entry_text2[0]){
 			if(IsIP((char *)entry_text2) == 0){
 				OKDialog(gettext("Incorrect IP address\n"));
-				gtk_widget_destroy(dialog);
-				goto top;
-			}
-			if(list_from_ip((char *)entry_text2) == NULL){
-				OKDialog(gettext("Please specify the HOT IP registered in the address book.\n"));
-				gtk_widget_destroy(dialog);
-				goto top;
-			}
-
-			if(strcmp(hot_ip,entry_text2)){
-				my_strncpy(hot_ip,entry_text2,sizeof(hot_ip));
-				update_address_book2();
+				err = 1;
+//				gtk_widget_destroy(dialog);
+//				goto top;
+			}else{
+				if(list_from_ip((char *)entry_text2) == NULL){
+					OKDialog(gettext("Please specify the HOT IP registered in the address book.\n"));
+					err = 1;
+//					gtk_widget_destroy(dialog);
+//					goto top;
+				}else{
+					if(strcmp(hot_ip,entry_text2)){
+						my_strncpy(hot_ip,entry_text2,sizeof(hot_ip));
+						update_address_book2();
+					}
+				}
 			}
 		}else{
 			hot_ip[0] = 0;
@@ -7769,8 +7776,9 @@ top:
 
 		entry_text3 = gtk_entry_get_text (GTK_ENTRY (entry3));
 		if(IsDigit((char *)entry_text3) == 0){
-			gtk_widget_destroy(dialog);
-			goto top;
+			err = 1;
+//			gtk_widget_destroy(dialog);
+//			goto top;
 		}
 		Iq = atoi(entry_text3);
 		if((0 <= Iq) && (Iq <= 100)){
@@ -7778,6 +7786,11 @@ top:
 			sprintf(buf,"%d",Iq);
 			update_params("CAMERA_IMAGE_QUALITY",buf);
 		}else{
+			err = 1;
+//			gtk_widget_destroy(dialog);
+//			goto top;
+		}
+		if(err){
 			gtk_widget_destroy(dialog);
 			goto top;
 		}
